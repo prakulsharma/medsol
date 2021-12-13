@@ -5,11 +5,11 @@ Project to check drug interactions among various medicines
 -   Create virtual environment
     - For linux users:
 
-            mkvirtualenv -p `which python3.9` drug-interactions
+            mkvirtualenv -p `which python3.6` drug-interactions
 
     - For windows users:
 
-            mkvirtualenv -p3.9 drug-interactions
+            mkvirtualenv -p3.6 drug-interactions
 
 
 -   Install dependencies:       
