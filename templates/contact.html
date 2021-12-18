@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact - MedSol</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/about">About</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+        <div class="title">
+            <h1>MedSol</h1>
+        </div>
+        <div class="tagline">
+            <h3>A simple and efficient way to cross-check prescriptions.</h3>
+        </div>
+        <hr class="break">
+        <div class="form">
+            <div class="album">
+                <span class="photo">
+                    <img class="photo_image" src="{{url_for('static', filename='tanmay.jpeg')}}">
+                    <h4><a href="http://tanmayagarwal.ml">Tanmay Agarwal</a></h4>
+                </span>
+                <span class="photo">
+                    <img class="photo_image" src="{{url_for('static', filename='prakul.jpeg')}}">
+                    <h4><a href="https://prakulsharma.github.io">Prakul Sharma</a></h4>
+                </span>
+            </div>
+        </div>
+        <hr class="break">
+        <div class="footer">
+            <h4>Developed by Tanmay Agarwal and Prakul Sharma</h4>
+            <h6>MedSol &copy; 2021</h6>
+        </div>
+    </body>
+</html>

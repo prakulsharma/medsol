@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactions - MedSol</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/about">About</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+        <div class="title">
+            <h1>MedSol</h1>
+        </div>
+        <div class="tagline">
+            <h3>A simple and efficient way to cross-check prescriptions.</h3>
+        </div>
+        <hr class="break">
+        <div class="form">
+            <div class="interactions">
+                <table>
+                    <caption><h3>Drugs in medicines</h3></caption>
+                    <tr>
+                        <th>Medicine name</th>
+                        <th>Drugs</th>
+                    </tr>
+                    {%for key,value in med_drugs_dict.items()%}
+                    <tr>
+                        <td>{{key}}</td>
+                        <td>
+                            <ol>
+                                {%for drug in value%}
+                                <li>{{drug}}</li>
+                                {%endfor%}
+                            </ol>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </table>
+                <br>
+                <br>
+                <table>
+                    <caption><h3>Interactions</h3></caption>
+                    <tr>
+                        <th>First drug</th>
+                        <th>Second drug</th>
+                        <th>Severity</th>
+                        <th>Remarks</th>
+                    </tr>
+                    {%for each in all_interactions%}
+                    <tr>
+                        {%for key,value in each.items()%}
+                            <td>{{value}}</td>
+                        {%endfor%}
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
+        <hr class="break">
+        <div class="footer">
+            <h4>Developed by Tanmay Agarwal and Prakul Sharma</h4>
+            <h6>MedSol &copy; 2021</h6>
+        </div>
+    </body>
+</html>

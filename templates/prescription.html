@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result - MedSol</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/about">About</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+        <div class="title">
+            <h1>MedSol</h1>
+        </div>
+        <div class="tagline">
+            <h3>A simple and efficient way to cross-check prescriptions.</h3>
+        </div>
+        <hr class="break">
+        <div class="result">
+            <form method=post action="/interactions">
+                <h4>Please input medicine names as a comma seperated text. For eg. Crocin, Volini, CCM etc.</h4>
+                <textarea id="thisText" rows="20" name="medicines"></textarea>
+
+                <div class="submit">
+                    <button type=submit value=Upload>Check for interactions</button>
+                </div>
+            </form>
+        </div>
+        <hr class="break">
+        <div class="footer">
+            <h4>Developed by Tanmay Agarwal and Prakul Sharma</h4>
+            <h6>MedSol &copy; 2021</h6>
+        </div>
+    </body>
+</html>

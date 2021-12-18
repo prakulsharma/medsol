@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error - MedSol</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/about">About</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+        <div class="title">
+            <h1>MedSol</h1>
+        </div>
+        <div class="tagline">
+            <h3>A simple and efficient way to cross-check prescriptions.</h3>
+        </div>
+        <hr class="break">
+        <div class="form">
+            <h3>{{msg}}</h3>
+        </div>
+        <hr class="break">
+        <div class="footer">
+            <h4>Developed by Tanmay Agarwal and Prakul Sharma</h4>
+            <h6>MedSol &copy; 2021</h6>
+        </div>
+    </body>
+</html>

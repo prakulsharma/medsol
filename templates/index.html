@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - MedSol</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="navlink" href="/">Home</a>
+            <a class="navlink" href="/about">About</a>
+            <a class="navlink" href="/contact">Contact</a>
+        </div>
+        <div class="title">
+            <h1>MedSol</h1>
+        </div>
+        <div class="tagline">
+            <h3>A simple and efficient way to cross-check prescriptions.</h3>
+        </div>
+        <hr class="break">
+        <div class="form">
+            <form method=post enctype=multipart/form-data action="/prescription">
+                <div class="submit">
+                    <button type=submit value=Upload>Enter manually</button>
+                </div>
+            </form>
+            <h4>OR</h4>
+            <form method=post enctype=multipart/form-data action="/result">
+                <div class="image">
+                    <img id="input_image">
+                </div>
+                <div class="browse">
+                    <label class="upload">
+                        <input type=file name=file onchange="loadFile(event)" accept="image/*">
+                        Select prescription
+                    </label>
+                </div>
+                <div class="submit">
+                    <button type=submit value=Upload>Upload</button>
+                </div>
+            </form>
+        </div>
+        <hr class="break">
+        <div class="footer">
+            <h4>Developed by Tanmay Agarwal and Prakul Sharma</h4>
+            <h6>MedSol &copy; 2021</h6>
+        </div>
+    </body>
+</html>
+<script>
+var loadFile = function(event) {
+  var image = document.getElementById('input_image');
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
