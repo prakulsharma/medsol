@@ -16,3 +16,5 @@ Project to check drug interactions among various medicines
 
         pip install -r requirements.txt --extra-index-url https://pypi.python.org/simple
 
+## Website
+https://medsol.herokuapp.com/
