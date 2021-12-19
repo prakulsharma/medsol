@@ -1,5 +1,5 @@
 # MedSol
-A simple and efficient way to cross-check prescriptions
+### A simple and efficient way to cross-check prescriptions
 
 For patients taking multiple prescription medications for their various medical conditions, the possibility of drug interactions is high and may have adverse effects on the patients. Often patients are unaware of their own medications and may be taking different formulations of the same drug prescribed by different doctors.
 
